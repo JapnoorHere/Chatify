@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Chatify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="next">NEXT</string>
+    <string name="verificationCode">Verification Code</string>
+    <string name="name">Name</string>
+    <string name="all_chats">All Chats</string>
+</resources>
