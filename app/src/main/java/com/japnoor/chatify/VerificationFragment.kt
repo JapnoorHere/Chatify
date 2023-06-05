@@ -58,7 +58,10 @@ class VerificationFragment : Fragment() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             userRef.child(auth.currentUser?.uid.toString()).child("phoneNo").setValue("+91 $phoneNumber").addOnCompleteListener {
-                                registerActivity.navController.navigate(R.id.action_verificationFragment_to_setProfileFragment)
+                                userRef.child(auth.currentUser?.uid.toString()).child("userId")
+                                    .setValue(auth.currentUser?.uid.toString()).addOnCompleteListener {
+                                    registerActivity.navController.navigate(R.id.setProfileFragment)
+                                }
                             }
                         } else {
                             Toast.makeText(registerActivity, task.exception?.message.toString(), Toast.LENGTH_SHORT).show()

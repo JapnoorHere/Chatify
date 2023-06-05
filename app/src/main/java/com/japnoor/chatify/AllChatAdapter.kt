@@ -28,6 +28,9 @@ class AllChatAdapter(var allChatsActivity: AllChatsActivity, var usersList: Arra
         holder.binding.phoneNumber.setText(usersList[position].phoneNo)
         holder.itemView.setOnClickListener{
             var intent= Intent(allChatsActivity,ChatActivity::class.java)
+            intent.putExtra("receiverId",usersList[position].userId)
+            intent.putExtra("profile",usersList[position].profile)
+            intent.putExtra("name",usersNameList[position])
             allChatsActivity.startActivity(intent)
         }
         Glide.with(allChatsActivity).load(usersList[position].profile).into(holder.binding.profile)
