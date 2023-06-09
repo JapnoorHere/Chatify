@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Chatify"
         tools:targetApi="31">
         <activity
+            android:name=".HomeScreenAdapter"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
@@ -32,7 +35,7 @@
         </activity>
         <activity
             android:name=".HomeScreen"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
